@@ -17,12 +17,12 @@ import javax.swing.table.DefaultTableModel;
 public class EspecialidadesDAO {
 
     private final static String URL
-//            = "C:\\Users\\22282470\\java-armazenamento\\Especialidade.txt";
-             = "C:\\Users\\cauhs\\Desktop\\trabalhoSenai\\java-armazenamento\\Especialidade.txt" ;
+            = "C:\\Users\\22282470\\java-armazenamento\\Especialidade.txt";
+//             = "C:\\Users\\cauhs\\Desktop\\trabalhoSenai\\java-armazenamento\\Especialidade.txt" ;
     
     private final static String URL_TEMP
-//            = "C:\\Users\\22282470\\java-armazenamento\\Especialidade-temp.txt";
-    = "C:\\Users\\cauhs\\Desktop\\trabalhoSenai\\java-armazenamento\\Especialidade-temp.txt" ;
+            = "C:\\Users\\22282470\\java-armazenamento\\Especialidade-temp.txt";
+//    = "C:\\Users\\cauhs\\Desktop\\trabalhoSenai\\java-armazenamento\\Especialidade-temp.txt" ;
       
 
     private final static Path PATH = Paths.get(URL);

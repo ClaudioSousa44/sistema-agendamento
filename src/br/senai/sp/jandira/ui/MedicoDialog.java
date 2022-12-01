@@ -26,7 +26,7 @@ public class MedicoDialog extends javax.swing.JDialog {
         initComponents();
         this.operacao = operacao;
         preencherListaDeEspecialidades();
-        preencherListaDeEspDoMedico();
+//        preencherListaDeEspDoMedico();
     }
 
     public MedicoDialog(
@@ -43,7 +43,7 @@ public class MedicoDialog extends javax.swing.JDialog {
         preencherFormulario();
         preencherTitulo();
          preencherListaDeEspecialidades();
-         preencherListaDeEspDoMedico();
+        
         
     }
     
@@ -67,6 +67,9 @@ public class MedicoDialog extends javax.swing.JDialog {
         jTextFieldEmail.setText(medico.getEmail());
         formattedTextFieldData.setText(medico.getDataNsc().
                 format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+        
+        preencherListaDeEspDoMedico();
+       
         
     }
     
@@ -419,11 +422,13 @@ public class MedicoDialog extends javax.swing.JDialog {
     private void buttonSalvarMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarMedicoActionPerformed
 
         CharSequence teste = " ";
+        
         if(formattedTextFieldData.getText().contains(teste) == true ||
                 textFieldCrm.getText().isEmpty() == true ||
                 textFieldNome.getText().isEmpty() == true ||
                 textFieldTelefone.getText().isEmpty() == true ||
-                jTextFieldEmail.getText().isEmpty() == true ){
+                jTextFieldEmail.getText().isEmpty() == true ||
+                jList1.getModel().getSize() == 0){
             JOptionPane.showMessageDialog(null, 
                     "preencha todos os campos!!", 
                     "Atenção!", 
@@ -481,7 +486,9 @@ public class MedicoDialog extends javax.swing.JDialog {
                     DateTimeFormatter.ofPattern("dd/MM/yyyy")));
          medico.setEspecialidade(pegarEspecialidades(jList1));
          
+         
          MedicoDAO.atualizar(medico);
+        
          
          JOptionPane.showMessageDialog(null,
                 "Atualizad0 com sucesso",
@@ -562,7 +569,7 @@ public class MedicoDialog extends javax.swing.JDialog {
         
     	
     	
-    }//GEN-LAST:event_jButtonRemoverActionPerformed
+    }                                              
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

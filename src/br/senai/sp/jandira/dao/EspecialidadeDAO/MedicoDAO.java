@@ -21,12 +21,12 @@ import javax.swing.tree.DefaultTreeModel;
 public class MedicoDAO {
 
     private final static String URL
-//            = "C:\\Users\\22282470\\java-armazenamento\\Medico.txt";
-      = "C:\\Users\\cauhs\\Desktop\\trabalhoSenai\\java-armazenamento\\Medico.txt" ;
+            = "C:\\Users\\22282470\\java-armazenamento\\Medico.txt";
+//      = "C:\\Users\\cauhs\\Desktop\\trabalhoSenai\\java-armazenamento\\Medico.txt" ;
     
     private final static String URL_TEMP
-//            = "C:\\Users\\22282470\\java-armazenamento\\Medico-temp.txt";
-    = "C:\\Users\\cauhs\\Desktop\\trabalhoSenai\\java-armazenamento\\Medico-temp.txt" ;
+            = "C:\\Users\\22282470\\java-armazenamento\\Medico-temp.txt";
+//    = "C:\\Users\\cauhs\\Desktop\\trabalhoSenai\\java-armazenamento\\Medico-temp.txt" ;
     
 
     private final static Path PATH = Paths.get(URL);
@@ -77,6 +77,7 @@ public class MedicoDAO {
                 break;
             }
         }
+         atualizarArquivo();
     }
 
     public static void excluir(Integer codigo) {//delete
